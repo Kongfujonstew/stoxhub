@@ -3,9 +3,9 @@ require('dotenv').config();
 const { API_KEY } = process.env;
 const moment = require('moment');
 
-console.log('API_KEY: ', API_KEY);
+const companyFromArgs = process.argv[2];
 
-const company = 'TDOC';
+const company = companyFromArgs || 'UFO';
 const resolution = 'D'; // for the API
 const units = 'days'; // for moment
 
@@ -69,12 +69,12 @@ const doit = data => {
     }
 
     let spacerTwo = '';
-    while (spacerTwo.length + String(thisAverage2Decimals).length < 10) {
+    while (spacerTwo.length + String(thisAverage2Decimals).length < 8) {
       spacerTwo += ' '
     }
 
 
-    console.log(`Average at ${lookBacks[i]} ${units}: ${spacerOne} ${thisAverage2Decimals}${spacerTwo}|| Current diff from: ${diffFromAverage2Decimals}%`);
+    console.log(`Average at ${lookBacks[i]} ${units}: ${spacerOne} ${thisAverage2Decimals}${spacerTwo}|| Current diff from:   ${diffFromAverage2Decimals}%`);
   }
 }
 
