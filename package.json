@@ -8,7 +8,8 @@
     "news": "node other/news.js",
     "graham": "node valuation/grahamValueBasicFinancials.js",
     "averages": "node price/movingAverages.js",
-    "peers": "node price/peersDailyChange.js"
+    "peers": "node price/peersDailyChange.js",
+    "financials": "node financials/getBasicFinancials.js"
   },
   "author": "JMS",
   "license": "MIT",

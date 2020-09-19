@@ -4,7 +4,9 @@ const moment = require('moment');
 const { API_KEY } = process.env;
 
 // tweakable settings
-const company = 'NVDA';
+const companyFromArgs = process.argv[2];
+
+const company = companyFromArgs || 'UFO';
 const yearsBackNum = 3;
 const yearsForwardNum = 7;
 const futureGrowthRate = 10;

@@ -4,7 +4,9 @@ const moment = require('moment');
 const { API_KEY } = process.env;
 
 // settings
-const company = 'TDOC';
+const companyFromArgs = process.argv[2];
+
+const company = companyFromArgs || 'UFO';
 // const yearsBackNum = 3;
 // const yearsForwardNum = 7;
 // const futureGrowthRate = 3;
@@ -15,6 +17,7 @@ const basicFinancialsUrl = `https://finnhub.io/api/v1/stock/metric?symbol=${comp
 const doit = data => {
   console.log('data: ')
   console.log(data)
+  console.log(data.series.annual)
 
 }
 
