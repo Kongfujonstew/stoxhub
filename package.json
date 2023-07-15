@@ -16,7 +16,7 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "isomorphic-fetch": "^2.2.1",
-    "moment": "^2.27.0"
+    "moment": "^2.29.4"
   },
   "repository": {
     "type": "git",
